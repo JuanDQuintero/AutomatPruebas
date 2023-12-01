@@ -1,19 +1,16 @@
 #Autor:Juan Diego Quintero
   #language:en
 
-  Feature: Simulación de Préstamo de Libre Inversión
-    Como usuario interesado en solicitar un crédito de libre inversión
-    Quiero conocer las diferentes opciones de crédito
-    Para poder elegir la más adecuada
+  Feature: Simulación compra fallida por estar sin sesión iniciada
+    Como usuario sin iniciar sesion
+    Quiero comprar un artículo
+    Para poder ver un mensaje indicando que iniciar sesión es obligatorio para comprar
 
-    Scenario: Buscar la seccion de financia lo que sueñas, quieres y necesitas. en la pagina de Bancolombia
-      Given me encuentro en la pagina de Bancolombia Personas
-      When le doy click a Saber mas de la seccion de financia lo que sueñas, quieres y necesitas
-      Then puedo ver la pagina de Bancolombia Personas
-      And le doy a Simular de la seccion de libre inversion Bancolombia
-      And le doy click en Continuar
-      And selecciono la opcion si
-      And ingreso los datos que necesito para la simulacion
-      And le doy click en Simular
-      Then puedo ver en la pagina mi simulacion del credito
+    Scenario: Buscar un articulo e intentar comprarlo para que salga que debe iniciar sesion
+      Given ingreso al navegador
+      And me dirijo a la pagina de mercadolibre
+      When digito play 5 y doy click en buscar
+      And doy click en el primer producto de "play 5"
+      And doy click en el boton de Comprar ahora
+      Then puedo observar que me pide iniciar sesion
 

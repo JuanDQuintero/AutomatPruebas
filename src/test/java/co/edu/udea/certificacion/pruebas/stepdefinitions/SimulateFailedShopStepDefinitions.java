@@ -1,13 +1,14 @@
-package co.edu.udea.certificacion.calidad.stepdefinitions;
+package co.edu.udea.certificacion.pruebas.stepdefinitions;
 
 
 import com.pruebasautomation.interactions.SelectBuyNow;
+import com.pruebasautomation.questions.ValidationPageMercadolibre;
 import com.pruebasautomation.questions.ValidationSimulation;
 import com.pruebasautomation.tasks.GoBuyNow;
 import com.pruebasautomation.tasks.NavigatePageMercadoLibre;
 import com.pruebasautomation.tasks.NavigatePageProducts;
 import com.pruebasautomation.tasks.OpenHomePage;
-import com.pruebasautomation.userinterfaces.UsuarioPage;
+import com.pruebasautomation.userinterfaces.UserPage;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -19,7 +20,7 @@ import org.openqa.selenium.WebDriver;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static org.hamcrest.core.IsEqual.equalTo;
-public class SimulateCreditsStepDefinitions {
+public class SimulateFailedShopStepDefinitions {
 
     @Managed(driver = "chrome")
     public WebDriver driver;
@@ -33,20 +34,20 @@ public class SimulateCreditsStepDefinitions {
 
     @And("me dirijo a la pagina de mercadolibre")
     public void meDirijoMercadolibre(){
-        user.attemptsTo(OpenHomePage.Browser(new UsuarioPage()));
+        user.attemptsTo(OpenHomePage.Browser(new UserPage()));
     }
     @When("digito play 5 y doy click en buscar")
     public void  digitoYBuscar(){
-        user.attemptsTo(NavigatePageMercadoLibre.onPage(new UsuarioPage()));
+        user.attemptsTo(NavigatePageMercadoLibre.onPage(new UserPage()));
     }
 
     @And("doy click en el primer producto de \"play 5\"")
     public void clickPrimerProducto(){
-        user.attemptsTo(NavigatePageProducts.onPage(new UsuarioPage()));
+        user.attemptsTo(NavigatePageProducts.onPage(new UserPage()));
     }
     @And("doy click en el boton de Comprar ahora")
     public void clickComprarAhora(){
-        user.attemptsTo(GoBuyNow.onPage(new UsuarioPage()));
+        user.attemptsTo(GoBuyNow.onPage(new UserPage()));
     }
 
     @Then("puedo observar que me pide iniciar sesion")

@@ -8,9 +8,9 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         features = "src/test/resources/features/simulate_search_mercadolibre.feature",
-        glue = "co.edu.udea.certificacion.calidad.stepdefinitions",
+        glue = "co.edu.udea.certificacion.pruebas.stepdefinitions",
         snippets = SnippetType.CAMELCASE
 )
-public class SimulateCreditsBancolombia {
+public class SimulateFailedShopMercadolibre {
 
 }

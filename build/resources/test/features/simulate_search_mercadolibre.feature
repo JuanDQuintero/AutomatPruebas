@@ -1,12 +1,12 @@
 #Autor:Juan Diego Quintero
   #language:en
 
-  Feature: Simulación de compra fallida con inicio de sesion en Mercadolibre
-    Como usuario interesado en buscar un play5
-    Quiero elegir el primer producto y comprarlo
-    Para poder ver la pagina de inicio de sesion
+  Feature: Simulación compra fallida por estar sin sesión iniciada
+    Como usuario sin iniciar sesion
+    Quiero comprar un artículo
+    Para poder ver un mensaje indicando que iniciar sesión es obligatorio para comprar
 
-    Scenario: Buscar un producto, comprarlo y obtener página de inicio de sesion
+    Scenario: Buscar un articulo e intentar comprarlo para que salga que debe iniciar sesion
       Given ingreso al navegador
       And me dirijo a la pagina de mercadolibre
       When digito play 5 y doy click en buscar

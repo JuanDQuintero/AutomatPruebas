@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Simulación compra fallida por estar sin sesión iniciada" skipped="0" tests="1" time="12.5" timestamp="2023-11-30 08:45:43"><testcase name="Buscar la seccion de financia lo que sueñas, quieres y necesitas. en la pagina de Bancolombia"><failure message="Expected enabled element was not enabled" type="net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException">Expected enabled element was not enabled</failure><system-err>Expected enabled element was not enabled&#13;
+com.pruebasautomation.interactions.SelectProduct.performAs(SelectProduct.java:17)&#13;
+com.pruebasautomation.tasks.NavigatePageMercadoLibre.performAs(NavigatePageMercadoLibre.java:18)&#13;
+co.edu.udea.certificacion.pruebas.stepdefinitions.SimulateFailedShopStepDefinitions.digitoYBuscar(SimulateFailedShopStepDefinitions.java:44)&#13;
+cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
+</system-err></testcase></testsuite>
